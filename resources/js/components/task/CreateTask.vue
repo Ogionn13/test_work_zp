@@ -1,6 +1,9 @@
 <template>
-    <user_error_block></user_error_block>
+
     <div>
+        <div class="container w-75">
+            <user_error_block></user_error_block>
+        </div>
         <div class="container mt-5 w-25">
             <h2 class="text-md-center text-bg-secondary">Новая задача</h2>
             <div class="mb-3">

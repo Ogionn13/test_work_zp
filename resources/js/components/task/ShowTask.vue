@@ -4,8 +4,8 @@
         <header class="d-flex justify-content-center mt-4">
             <h1 contenteditable="true" ref="newTitle" @blur="editTitle">{{ task.title }}</h1>
         </header>
-        <div class="container d-flex justify-content-center bg-success-subtle mt-3">
-            <div class="d-flex justify-content-center align-items-center w-75">
+        <div class="container d-flex justify-content-center card bg-success-subtle border-3 w-75 mt-3 ">
+            <div class="d-flex justify-content-center  align-items-center">
                 <div class="col-2 h3">
                     Проект:
                 </div>

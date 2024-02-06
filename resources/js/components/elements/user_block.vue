@@ -1,7 +1,7 @@
 <template>
     <div class="container mt-3 w-75 d-flex justify-content-end">
         <div class="col-3 text-left">
-            <p class="text-gray ">{{ userName }}</p>
+            <strong class="text-gray ">{{ userName }}</strong>
         </div>
     </div>
 </template>

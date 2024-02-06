@@ -1,16 +1,16 @@
 <template>
     <div class="container mt-3 w-75 d-flex justify-content-between">
         <div class="col-4">
-            <div v-if="$parent.result.result && $parent.result.result ==='error'" class="border-3  bg-danger-subtle">
-                <p>{{ $parent.result.message }}</p>
+            <div v-if="$parent.result.result && $parent.result.result ==='error'" >
+                <p class="card border-0 text-center  bg-danger-subtle">{{ $parent.result.message }}</p>
             </div>
-            <div v-if="$parent.result.result && $parent.result.result === 'ok'" class="border-3  bg-success-subtle">
-                <p>{{ $parent.result.message }}</p>
+            <div v-if="$parent.result.result && $parent.result.result === 'ok'" >
+                <p class="card border-0 text-center  bg-success-subtle">{{ $parent.result.message }}</p>
             </div>
 
         </div>
         <div class="col-4">
-            <p class="text-gray ">{{ userName }}</p>
+            <strong class="text-gray ">{{ userName }}</strong>
         </div>
 
     </div>

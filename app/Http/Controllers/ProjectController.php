@@ -46,6 +46,7 @@ class ProjectController extends Controller
     public function timeReport(){
         $userId = auth()->id();
         return Project::select('id', 'title', 'deadline')
+            ->orderBy('tasks_sum_length', 'desc')
             ->withCount('tasks')
             ->withSum('tasks', 'length')
             ->where('user_id', $userId)

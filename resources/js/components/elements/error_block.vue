@@ -1,8 +1,8 @@
 <template>
     <div class="container mt-3 w-75 d-flex justify-content-center">
         <div class="col-4">
-            <div v-if="$parent.result.result && $parent.result.result ==='error'" class="border-3  bg-danger-subtle">
-                <p>{{ $parent.result.message }}</p>
+            <div v-if="$parent.result.result && $parent.result.result ==='error'">
+                <p  class="card border-3 text-center align-top bg-danger-subtle">{{ $parent.result.message }}</p>
             </div>
         </div>
     </div>
@@ -11,8 +11,6 @@
 <script>
 export default {
     name: "error_block",
-
-
 }
 </script>
 

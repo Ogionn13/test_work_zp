@@ -1,6 +1,6 @@
 <template>
-    <user_error_block></user_error_block>
     <div class="container w-75" v-if="project">
+        <user_error_block></user_error_block>
         <div class="form-group d-flex justify-content-center mt-4">
             <h2 contenteditable="true" ref='newTitle' @blur="editTitle()">{{ project.title }}</h2>
         </div>
