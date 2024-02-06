@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('description');
             $table->dateTime('deadline');
             $table->integer('length')->default(0);
-            $table->foreignIdFor(Project::class);
+            $table->foreignIdFor(Project::class)->constrained();
             $table->timestamps();
         });
     }
