@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
 
         User::factory()->count(3)->create()
             ->each(function ($user, $index) {
-            $user->email = "test$index@test.ru";
+            $user->email = "user$index@test.ru";
             $user->save();
         });
     }

@@ -30,11 +30,4 @@ class StoreTaskRequest extends FormRequest
         ];
     }
 
-    public function messages()
-    {
-        return [
-            'deadline.after_or_equal' =>'Вы запланировать окончание прошедшей датой'
-
-        ];
-    }
 }

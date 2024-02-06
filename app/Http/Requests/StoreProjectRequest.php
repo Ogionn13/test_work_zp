@@ -28,12 +28,4 @@ class StoreProjectRequest extends FormRequest
             'category_id' => 'required',
         ];
     }
-
-    public function messages()
-    {
-        return [
-            'deadline.after_or_equal' =>'Вы запланировать завершение прошедшей датой'
-
-        ];
-    }
 }

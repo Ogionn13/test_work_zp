@@ -21,14 +21,8 @@ class UpdateProjectRequest extends FormRequest
      */
     public function rules(): array
     {
-//        return [
-//            'title' => 'required_without:description,category_id,deadline|string',
-//            'description' => 'required_without:title,category_id,deadline|string|nullable',
-//            'deadline' => 'required_without:title,category_id,description|date|after_or_equal:today|nullable',
-//            'category_id' => 'required_without:title,description,deadline|integer|nullable',
-//        ];
         return  [
-            'title' => 'required_without_all:description,category_id,deadline|string|min:30',
+            'title' => 'required_without_all:description,category_id,deadline|string',
             'description' => 'required_without_all:title,category_id,deadline|string',
             'deadline' => 'required_without_all:title,category_id,description|date',
             'category_id' => 'required_without_all:title,description,deadline|integer'

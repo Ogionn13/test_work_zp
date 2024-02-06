@@ -16,14 +16,6 @@ class UpdateTaskRequest extends FormRequest
         return true;
     }
 
-//    protected function failedValidation(Validator $validator)
-//    {
-//        $errors = $validator->errors();
-//        return response()->json(['errors' => $errors], 204);
-//
-//        throw new HttpResponseException(response()->json(['errors' => $errors], 422));
-//    }
-
     /**
      * Get the validation rules that apply to the request.
      *

@@ -132,7 +132,10 @@ export default {
         },
 
         editTitle() {
-            this.editTask({title: this.$refs.newTitle.textContent}, 'Изменено название задачи');
+            if (this.$refs.newTitle.textContent !== this.task.title) {
+                this.task.title = this.$refs.newTitle.textContent
+                this.editTask({title: this.$refs.newTitle.textContent}, 'Изменено название задачи');
+            }
         },
 
         editDeadline() {
@@ -140,7 +143,10 @@ export default {
         },
 
         editDescription() {
-            this.editTask({description: this.$refs.newDescription.textContent}, 'Изменено описание задачи ');
+            if (this.$refs.newDescription.textContent !== this.task.description) {
+                this.task.description = this.$refs.newDescription.textContent
+                this.editTask({description: this.$refs.newDescription.textContent}, 'Изменено описание задачи ');
+            }
         },
 
         updateTaskProject() {
