@@ -36,7 +36,6 @@ export default {
                 .then(response => {
                     axios.get('/api/user/name')
                         .then(response => {
-                            console.log(response)
                             this.userName = response.data;
                         })
                         .catch(error => {

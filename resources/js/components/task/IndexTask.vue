@@ -23,7 +23,7 @@
                     </td>
                     <td class="text-md-center">{{ task.deadline }}</td>
                     <td class="text-md-center">{{ task.task_status_name }}</td>
-                    <th class="text-md-center">{{ formatTime( task.length) }}</th>
+                    <th class="text-md-center">{{ formatTime(task.length) }}</th>
                     <td class="my-btn-to-project">
                         <router-link :to="{ name: 'projects.show', params: { id: task.project_id }}"
                                      class="text-decoration-none text-dark">
@@ -57,8 +57,7 @@ export default {
         this.getOpenTasks();
     },
 
-    computed: {
-    },
+    computed: {},
 
 
     methods: {
@@ -67,7 +66,6 @@ export default {
                 .then(response => {
                     axios.get('/api/tasks')
                         .then(response => {
-                            console.log(response.data)
                             this.openTasks = response.data;
                         })
                         .catch(error => {
@@ -76,15 +74,17 @@ export default {
                 });
         },
 
-        formatTime(time){
+        formatTime(time) {
             const hours = Math.floor(time / 3600);
-            const minutes = Math.floor((time % 3600) / 60).toString().padStart(2, '0');;
-            const seconds = (time % 60).toString().padStart(2, '0');;
-            return hours + ': ' + minutes + ': ' + seconds ;
+            const minutes = Math.floor((time % 3600) / 60).toString().padStart(2, '0');
+            ;
+            const seconds = (time % 60).toString().padStart(2, '0');
+            ;
+            return hours + ': ' + minutes + ': ' + seconds;
         },
 
         createTask() {
-            this.$router.push({ name: 'tasks.create'})
+            this.$router.push({name: 'tasks.create'})
         }
     }
 };

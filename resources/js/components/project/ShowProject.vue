@@ -55,7 +55,7 @@
                         </router-link>
                     </td>
                     <td class="text-md-center">{{ task.deadline }}</td>
-                    <td>{{ task.status_name }}</td>
+                    <td>{{ task.task_status.name }}</td>
                 </tr>
                 </tbody>
             </table>
@@ -169,7 +169,6 @@ export default {
                 .then(response => {
                     axios.get('/api/projects/' + this.$route.params.id)
                         .then(response => {
-                            console.log(response.data)
                             this.project = response.data;
                         })
                         .catch(error => {

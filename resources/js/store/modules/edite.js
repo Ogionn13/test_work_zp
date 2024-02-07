@@ -16,7 +16,6 @@ export default {
                 .then(response => {
                     commit('setResult', 'ok');
                 }).catch(error => {
-                console.log(error.response.data.message)
                     commit('setResult', error.response.data.message);
             });
         },

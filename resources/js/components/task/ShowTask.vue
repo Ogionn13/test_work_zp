@@ -111,7 +111,7 @@ export default {
         editTask(data, mess) {
             axios.get('/sanctum/csrf-cookie')
                 .then(response => {
-                    axios.patch('/api/tasks/' + this.$route.params.id, data)
+                    axios.patch('/api/tasks/' + this.task.id, data)
                         .then(response => {
                             this.result = {'result': 'ok', 'message': mess}
                         })
